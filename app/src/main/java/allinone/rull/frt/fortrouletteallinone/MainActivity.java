@@ -158,10 +158,9 @@ public void createChallenge(int experement){
                                 start_stop.setText("START");
                                 txt_score.setText("Time is over :(");
                                 timer_int = 0;
-                               // complete = false;
+                                complete = false;
                             }
                         }.start();
-
 
                     complete= true;
 
@@ -173,8 +172,6 @@ public void createChallenge(int experement){
                     complete = false;
                     timer_int = 0;
                 }
-
-
                 break;
 
             case R.id.retry:
