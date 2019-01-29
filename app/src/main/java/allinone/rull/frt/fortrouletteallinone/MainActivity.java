@@ -51,8 +51,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 }
 
-public void createChallenge(int experement){
-        if (experement==1){
+public void createChallenge(int restart){
+        if (restart==1){
             progress=0;
             time=30;
         }
@@ -155,7 +155,7 @@ public void createChallenge(int experement){
                             public void onFinish() {
                                 // start_stop.setText("00:00:00");
                                 retry.setVisibility(View.VISIBLE);
-                                start_stop.setText("START");
+                                start_stop.setText("TRY AGAIN");
                                 txt_score.setText("Time is over :(");
                                 timer_int = 0;
                                 complete = false;
@@ -167,7 +167,7 @@ public void createChallenge(int experement){
                 }else {
                     yourCountDownTimer.cancel();
                     retry.setVisibility(View.VISIBLE);
-                    start_stop.setText("START");
+                    start_stop.setText("TRY AGAIN");
                     txt_score.setText("Score: " + timer_string );
                     complete = false;
                     timer_int = 0;
@@ -175,6 +175,7 @@ public void createChallenge(int experement){
                 break;
 
             case R.id.retry:
+                start_stop.setText("START");
                 txt_score.setVisibility(View.GONE);
                 recyclerView.setVisibility(View.GONE);
                 createChallenge(1);
