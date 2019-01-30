@@ -114,7 +114,7 @@ public class ChallengeOnTime extends Fragment implements View.OnClickListener {
             adapter.addMessage(ChallengeItem.getLandingPoint().get(new Random().nextInt(ChallengeItem.getLandingPoint().size())));
             adapter.addMessage(ChallengeItem.getKillChallenge().get(new Random().nextInt(ChallengeItem.getKillChallenge().size())));
             adapter.addMessage(ChallengeItem.getSecretChallenge().get(new Random().nextInt(ChallengeItem.getSecretChallenge().size())));
-            retry.setText("RETRY");
+            retry.setText("Change\nChallenge");
 
         }
     }

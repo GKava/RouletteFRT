@@ -7,10 +7,12 @@
     android:layout_marginBottom="1dp"
     android:layout_marginLeft="3dp"
     android:layout_marginRight="3dp"
+    app:cardElevation="0dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
     <LinearLayout
+        android:background="@drawable/card_background"
         android:id="@+id/info1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,8 +36,7 @@
 
             <TextView
                 android:fontFamily="@font/lol"
-                android:textSize="30dp"
-                android:textStyle="bold"
+                android:textSize="32dp"
                 android:id="@+id/textName"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
