@@ -26,9 +26,10 @@
         app:layout_constraintVertical_bias="0.373" />
 
     <TextView
+        android:textColor="#FFF"
         android:gravity="center"
         android:fontFamily="@font/lol"
-        android:textSize="30sp"
+        android:textSize="35sp"
         android:visibility="invisible"
         android:layout_gravity="center"
         android:id="@+id/tv"
@@ -52,10 +53,11 @@
         android:layout_width="match_parent"
         android:layout_height="100dp">
         <Button
+            android:textColor="#FFF"
             android:layout_margin="3dp"
-            android:background="@drawable/card_background"
+            android:background="@drawable/background_card"
             android:fontFamily="@font/lol"
-            android:textSize="22sp"
+            android:textSize="35sp"
             android:visibility="gone"
             android:id="@+id/start_stop"
             android:text="START"
@@ -63,10 +65,11 @@
             android:layout_width="0dp"
             android:layout_height="match_parent" />
         <Button
+            android:textColor="#FFF"
             android:layout_margin="3dp"
-            android:background="@drawable/card_background"
+            android:background="@drawable/background_card"
             android:fontFamily="@font/lol"
-            android:textSize="22sp"
+            android:textSize="35sp"
             android:visibility="gone"
             android:id="@+id/retry"
             android:text="CREATE CHALLENGE"
@@ -75,9 +78,11 @@
             android:layout_height="match_parent" />
     </LinearLayout>
     <TextView
+        android:layout_margin="3dp"
+        android:background="@drawable/backgroung_timer"
         android:fontFamily="@font/lol"
         android:visibility="gone"
-        android:textColor="#000"
+        android:textColor="#FFF"
         android:gravity="center"
         android:text="score"
         android:id="@+id/txt_score"

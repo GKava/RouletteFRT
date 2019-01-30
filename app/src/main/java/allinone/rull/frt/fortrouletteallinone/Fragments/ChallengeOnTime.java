@@ -109,7 +109,7 @@ public class ChallengeOnTime extends Fragment implements View.OnClickListener {
             retry.setVisibility(View.VISIBLE);
             recyclerView.setVisibility(View.VISIBLE);
 
-            adapter = new ChallengeAdapter(250);
+            adapter = new ChallengeAdapter();
             recyclerView.setAdapter(adapter);
             adapter.addMessage(ChallengeItem.getLandingPoint().get(new Random().nextInt(ChallengeItem.getLandingPoint().size())));
             adapter.addMessage(ChallengeItem.getKillChallenge().get(new Random().nextInt(ChallengeItem.getKillChallenge().size())));
@@ -144,6 +144,9 @@ public class ChallengeOnTime extends Fragment implements View.OnClickListener {
 
                             timer_string = f.format(min) + ":" + f.format(sec);
                             txt_score.setText(f.format(min) + ":" + f.format(sec));
+                            txt_score.setTextSize(50);
+
+                            // сделать если остается меньше 30 сек желтый цвет, меньше 10 красный + тик
                         }
 
                         public void onFinish() {
@@ -153,6 +156,7 @@ public class ChallengeOnTime extends Fragment implements View.OnClickListener {
                             txt_score.setText("Time is over :(");
                             timer_int = 0;
                             complete = false;
+                            txt_score.setTextSize(35);
                         }
                     }.start();
 
@@ -165,6 +169,7 @@ public class ChallengeOnTime extends Fragment implements View.OnClickListener {
                     txt_score.setText("Score: " + timer_string );
                     complete = false;
                     timer_int = 0;
+                    txt_score.setTextSize(35);
                 }
                 break;
 

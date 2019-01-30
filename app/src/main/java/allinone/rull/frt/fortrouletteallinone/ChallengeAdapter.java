@@ -19,12 +19,10 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
 
     private ArrayList<ChallengeItem> items = new ArrayList<ChallengeItem>();
     private static final String TAG = "MY LOG ADAPTER ";
-    private int width;
-    Context context;
 
-    public ChallengeAdapter(int width) {
+    public ChallengeAdapter() {
         super();
-        this.width = width;
+
     }
 
     @Override
@@ -37,18 +35,11 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
         Log.d(TAG, "onBindViewHolder");
         final int pos = position;
         final ChallengeItem item = items.get(position);
-
-//        holder.imageName1.setImageResource(item.getImageName1());
-//        holder.imageName2.setImageResource(item.getImageName2());
-
         Glide.with(holder.itemView.getContext()).load(item.getImageName1())
                 .thumbnail(0.5f)
                 .into(holder.imageName1);
-//
-//        Glide.with(holder.itemView.getContext()).load(item.getTextName())
-//                .thumbnail(0.5f)
-//                .into(holder.textName);
-                holder.textName.setText(item.getTextName());
+
+                 holder.textName.setText(item.getTextName());
     }
 
     @NonNull
@@ -56,10 +47,6 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
     public ChallengeAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         Log.d(TAG, "onCreateViewHolder");
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_challenge, parent, false);
-
-        RecyclerView.LayoutParams lp = (RecyclerView.LayoutParams) view.getLayoutParams();
-        lp.height = width;
-        view.setLayoutParams(lp);
 
         return new ChallengeAdapter.ViewHolder(view);
     }
