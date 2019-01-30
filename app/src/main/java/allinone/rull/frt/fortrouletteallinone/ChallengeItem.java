@@ -34,7 +34,7 @@ public class ChallengeItem {
         ArrayList<ChallengeItem> itemList = new ArrayList<>();
         itemList.add(new ChallengeItem(R.drawable.skull, "Go landing on loot lake"));
         itemList.add(new ChallengeItem(R.drawable.skull, "Go landing on snow tower"));
-        itemList.add(new ChallengeItem(R.drawable.skull, "Go landing on sea"));
+        itemList.add(new ChallengeItem(R.drawable.skull, "Go landing on seagit "));
         return itemList;
     }
     public static List<ChallengeItem> getKillChallenge(){
