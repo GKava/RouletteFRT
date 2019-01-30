@@ -46,6 +46,8 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
         }else if (item.getRarityColor() == 3){
             holder.cardView.setBackground(ContextCompat.getDrawable(holder.cardView.getContext(), R.drawable.background_rarity));
         }else if (item.getRarityColor() == 4){
+            holder.cardView.setBackground(ContextCompat.getDrawable(holder.cardView.getContext(), R.drawable.background_green));
+        }else if (item.getRarityColor() == 5){
             holder.cardView.setBackground(ContextCompat.getDrawable(holder.cardView.getContext(), R.drawable.background_different));
         }
 

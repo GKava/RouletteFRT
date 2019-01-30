@@ -46,6 +46,7 @@ public class ChallengeItem {
         itemList.add(new ChallengeItem(R.drawable.landing, "Go landing 2",2));
         itemList.add(new ChallengeItem(R.drawable.landing, "Go landing 3",3));
         itemList.add(new ChallengeItem(R.drawable.landing, "Go landing 4",4));
+        itemList.add(new ChallengeItem(R.drawable.landing, "Go landing 5",5));
         return itemList;
     }
     public static List<ChallengeItem> getKillChallenge(){
@@ -61,6 +62,7 @@ public class ChallengeItem {
         itemList.add(new ChallengeItem(R.drawable.dance, "dance",2));
         itemList.add(new ChallengeItem(R.drawable.skull, "skull",3));
         itemList.add(new ChallengeItem(R.drawable.landing, "Go landing 3",4));
+        itemList.add(new ChallengeItem(R.drawable.landing, "Go landing 5",5));
         return itemList;
     }
 }
