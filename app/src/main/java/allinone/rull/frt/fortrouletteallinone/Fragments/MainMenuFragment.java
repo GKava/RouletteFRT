@@ -1,6 +1,8 @@
 package allinone.rull.frt.fortrouletteallinone.Fragments;
 
 
+import android.content.res.AssetManager;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -31,6 +33,7 @@ Button onTimeChallenge,justChallenge;
         justChallenge = view.findViewById(R.id.justChallenge);
         onTimeChallenge.setOnClickListener(this);
         justChallenge.setOnClickListener(this);
+
 
         return view;
     }

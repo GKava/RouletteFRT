@@ -26,7 +26,9 @@
         app:layout_constraintVertical_bias="0.373" />
 
     <TextView
-        android:textSize="20sp"
+        android:gravity="center"
+        android:fontFamily="@font/lol"
+        android:textSize="30sp"
         android:visibility="invisible"
         android:layout_gravity="center"
         android:id="@+id/tv"
@@ -50,6 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp">
         <Button
+            android:fontFamily="@font/lol"
             android:textSize="22sp"
             android:visibility="gone"
             android:id="@+id/start_stop"
@@ -58,6 +61,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent" />
         <Button
+            android:fontFamily="@font/lol"
             android:textSize="22sp"
             android:visibility="gone"
             android:id="@+id/retry"
@@ -67,6 +71,7 @@
             android:layout_height="match_parent" />
     </LinearLayout>
     <TextView
+        android:fontFamily="@font/lol"
         android:visibility="gone"
         android:textColor="#000"
         android:gravity="center"

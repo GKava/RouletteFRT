@@ -3,14 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Fragments.MainMenuFragment">
 
     <Button
+        android:textSize="22sp"
+        android:fontFamily="@font/lol"
+        android:background="@drawable/fiol_gradient"
         android:id="@+id/justChallenge"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:text="Challenge "/>
-<Button
+
+    <Button
+    android:textSize="22sp"
+    android:fontFamily="@font/lol"
+    android:background="@drawable/fiol_gradient"
     android:id="@+id/onTimeChallenge"
     android:layout_width="match_parent"
     android:layout_height="100dp"

@@ -102,7 +102,7 @@ public class ChallengeOnTime extends Fragment implements View.OnClickListener {
         tv.setText(strProgress);
 
         if (progress==100){
-            tv.setText("Challenge");
+            tv.setText("\nYOUR\nChallenge\n");
             progressBar.setVisibility(ProgressBar.GONE);
             progressBar.setProgress(0);
             start_stop.setVisibility(View.VISIBLE);
