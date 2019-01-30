@@ -29,9 +29,26 @@ public class ChallengeItem {
         this.textName = textName;
     }
 
-    public static List<ChallengeItem> getAllItems(){
-        ArrayList<ChallengeItem> itemList = new ArrayList<>();
 
+    public static List<ChallengeItem> getLandingPoint(){
+        ArrayList<ChallengeItem> itemList = new ArrayList<>();
+        itemList.add(new ChallengeItem(R.drawable.skull, "Go landing on loot lake"));
+        itemList.add(new ChallengeItem(R.drawable.skull, "Go landing on snow tower"));
+        itemList.add(new ChallengeItem(R.drawable.skull, "Go landing on sea"));
+        return itemList;
+    }
+    public static List<ChallengeItem> getKillChallenge(){
+        ArrayList<ChallengeItem> itemList = new ArrayList<>();
+        itemList.add(new ChallengeItem(R.drawable.skull, "1 kill"));
+        itemList.add(new ChallengeItem(R.drawable.skull, "2 kill"));
+        itemList.add(new ChallengeItem(R.drawable.skull, "3 kill"));
+        return itemList;
+    }
+    public static List<ChallengeItem> getSecretChallenge(){
+        ArrayList<ChallengeItem> itemList = new ArrayList<>();
+        itemList.add(new ChallengeItem(R.drawable.skull, "s 1"));
+        itemList.add(new ChallengeItem(R.drawable.skull, "s 2"));
+        itemList.add(new ChallengeItem(R.drawable.skull, "s 3 "));
         return itemList;
     }
 }
