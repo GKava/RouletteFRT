@@ -1,7 +1,8 @@
 package allinone.rull.frt.fortrouletteallinone;
 
-import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -19,9 +20,11 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
 
     private ArrayList<ChallengeItem> items = new ArrayList<ChallengeItem>();
     private static final String TAG = "MY LOG ADAPTER ";
+    private int rarityColor;
 
     public ChallengeAdapter() {
         super();
+
 
     }
 
@@ -35,11 +38,26 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
         Log.d(TAG, "onBindViewHolder");
         final int pos = position;
         final ChallengeItem item = items.get(position);
+
+        if (item.getRarityColor() == 1){
+            holder.cardView.setBackground(ContextCompat.getDrawable(holder.cardView.getContext(), R.drawable.background_epic));
+        }else if (item.getRarityColor() == 2){
+            holder.cardView.setBackground(ContextCompat.getDrawable(holder.cardView.getContext(), R.drawable.background_legendary));
+        }else if (item.getRarityColor() == 3){
+            holder.cardView.setBackground(ContextCompat.getDrawable(holder.cardView.getContext(), R.drawable.background_rarity));
+        }else if (item.getRarityColor() == 4){
+            holder.cardView.setBackground(ContextCompat.getDrawable(holder.cardView.getContext(), R.drawable.background_different));
+        }
+
         Glide.with(holder.itemView.getContext()).load(item.getImageName1())
                 .thumbnail(0.5f)
                 .into(holder.imageName1);
 
                  holder.textName.setText(item.getTextName());
+
+
+
+
     }
 
     @NonNull
@@ -55,12 +73,14 @@ public class ChallengeAdapter extends RecyclerView.Adapter<ChallengeAdapter.View
     public static class ViewHolder extends RecyclerView.ViewHolder {
         ImageView imageName1;
         TextView textName;
+        CardView cardView;
 
 
         public ViewHolder(View itemView) {
             super(itemView);
-            imageName1 =(ImageView) itemView.findViewById(R.id.imageName);
-            textName =(TextView) itemView.findViewById(R.id.textName);
+            imageName1 = itemView.findViewById(R.id.imageName);
+            textName = itemView.findViewById(R.id.textName);
+            cardView = itemView.findViewById(R.id.cardView);
         }
 
         public void bind(ChallengeItem allConstructionItem) {
