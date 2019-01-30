@@ -1,3 +1,4 @@
 <bitmap xmlns:android="http://schemas.android.com/apk/res/android"
-    android:src="@drawable/mostgti "
-    android:tileMode="repeat" />
+    android:src="@drawable/most"
+    android:tileMode="repeat"
+    />
