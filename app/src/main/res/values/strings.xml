@@ -3,4 +3,13 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="your_challenge">\nYOUR\nChallenge</string>
+    <string name="rechallenge">Change Challenge</string>
+    <string name="stop">Stop</string>
+    <string name="try_again">TRY AGAIN</string>
+    <string name="time_is_over">Time is over :(</string>
+    <string name="score">Score:</string>
+    <string name="start">START</string>
+    <string name="challenge_on_time">Challenge on time</string>
+    <string name="challenge">Challenge</string>
 </resources>

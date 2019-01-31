@@ -14,7 +14,7 @@
         android:id="@+id/justChallenge"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:text="Challenge "/>
+        android:text="@string/challenge"/>
 
     <Button
         android:textColor="#FFF"
@@ -24,6 +24,6 @@
         android:id="@+id/onTimeChallenge"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:text="Challenge on time "/>
+        android:text="@string/challenge_on_time"/>
 
 </LinearLayout>

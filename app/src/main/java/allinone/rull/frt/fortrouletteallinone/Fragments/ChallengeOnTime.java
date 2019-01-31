@@ -31,7 +31,6 @@ public class ChallengeOnTime extends Fragment implements View.OnClickListener {
     TextView tv,txt_score;
     int progress = 0;
     int time = 30;
-    int timer;
     private RecyclerView recyclerView;
     private LinearLayoutManager verticalLinearLayoutManager;
     private ChallengeAdapter adapter;
@@ -102,7 +101,7 @@ public class ChallengeOnTime extends Fragment implements View.OnClickListener {
         tv.setText(strProgress);
 
         if (progress==100){
-            tv.setText("\nYOUR\nChallenge\n");
+            tv.setText(R.string.your_challenge);
             progressBar.setVisibility(ProgressBar.GONE);
             progressBar.setProgress(0);
             start_stop.setVisibility(View.VISIBLE);
@@ -114,7 +113,7 @@ public class ChallengeOnTime extends Fragment implements View.OnClickListener {
             adapter.addMessage(ChallengeItem.getLandingPoint().get(new Random().nextInt(ChallengeItem.getLandingPoint().size())));
             adapter.addMessage(ChallengeItem.getKillChallenge().get(new Random().nextInt(ChallengeItem.getKillChallenge().size())));
             adapter.addMessage(ChallengeItem.getSecretChallenge().get(new Random().nextInt(ChallengeItem.getSecretChallenge().size())));
-            retry.setText("Change\nChallenge");
+            retry.setText(R.string.rechallenge);
 
         }
     }
@@ -124,15 +123,10 @@ public class ChallengeOnTime extends Fragment implements View.OnClickListener {
         switch (v.getId()){
             case R.id.start_stop:
                 if (complete==false ) { // запущен ли челендж
-
                     retry.setVisibility(View.GONE);
                     txt_score.setVisibility(View.GONE);
-                    start_stop.setText("STOP");
+                    start_stop.setText(R.string.stop);
 
-                    //УСЛОВИЕ
-
-
-                    // общее время и интервал в параметрах
                     yourCountDownTimer = new CountDownTimer(5000, 1000) {
 
                         public void onTick(long millisUntilFinished) {
@@ -152,8 +146,8 @@ public class ChallengeOnTime extends Fragment implements View.OnClickListener {
                         public void onFinish() {
                             // start_stop.setText("00:00:00");
                             retry.setVisibility(View.VISIBLE);
-                            start_stop.setText("TRY AGAIN");
-                            txt_score.setText("Time is over :(");
+                            start_stop.setText(R.string.try_again);
+                            txt_score.setText(R.string.time_is_over);
                             timer_int = 0;
                             complete = false;
                             txt_score.setTextSize(35);
@@ -165,8 +159,8 @@ public class ChallengeOnTime extends Fragment implements View.OnClickListener {
                 }else {
                     yourCountDownTimer.cancel();
                     retry.setVisibility(View.VISIBLE);
-                    start_stop.setText("TRY AGAIN");
-                    txt_score.setText("Score: " + timer_string );
+                    start_stop.setText(R.string.try_again);
+                    txt_score.setText(getString(R.string.score) + timer_string );
                     complete = false;
                     timer_int = 0;
                     txt_score.setTextSize(35);
@@ -174,7 +168,7 @@ public class ChallengeOnTime extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.retry:
-                start_stop.setText("START");
+                start_stop.setText(R.string.start);
                 txt_score.setVisibility(View.GONE);
                 recyclerView.setVisibility(View.GONE);
                 createChallenge(1);
