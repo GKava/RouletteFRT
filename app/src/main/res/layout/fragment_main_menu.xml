@@ -7,20 +7,22 @@
     tools:context=".Fragments.MainMenuFragment">
 
     <Button
+        android:layout_margin="5dp"
         android:textColor="#FFF"
         android:textSize="22sp"
         android:fontFamily="@font/lol"
-        android:background="@drawable/fiol_gradient"
+        android:background="@drawable/background_card"
         android:id="@+id/justChallenge"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:text="@string/challenge"/>
 
     <Button
+        android:layout_margin="5dp"
         android:textColor="#FFF"
         android:textSize="22sp"
         android:fontFamily="@font/lol"
-        android:background="@drawable/fiol_gradient"
+        android:background="@drawable/background_card"
         android:id="@+id/onTimeChallenge"
         android:layout_width="match_parent"
         android:layout_height="100dp"
